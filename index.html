@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GruasDS</title>
+    <link rel="stylesheet" href="./assent/css/index.css">
+    <script defer src="./assent/js/index.js""></script>
+    <link rel="stylesheet" href="./assent/css/form.css">
+    <link rel="icon" href="./assent/img/logo-gruas-removebg-preview.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./assent/img/logo-gruas-removebg-preview.png" alt="GruasDS Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Quiénes Somos</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#mission">Nuestra Misión</a></li>
+                    <li><a href="#vision">Nuestra Visión</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </div>
+        <div class="mobile-menu">
+            <div class="back-arrow" onclick="hideMenu()">←</div>
+            <ul>
+                <li><a href="#about" onclick="hideMenu()">Quiénes Somos</a></li>
+                <li><a href="#services" onclick="hideMenu()">Servicios</a></li>
+                <li><a href="#mission" onclick="hideMenu()">Nuestra Misión</a></li>
+                <li><a href="#vision" onclick="hideMenu()">Nuestra Visión</a></li>
+                <li><a href="#contact" onclick="hideMenu()">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h2>Ofrecemos nuestros servicios de</h2>
+            <h1>Arriendo de Grúas</h1>
+        </div>
+    </section>
+    <main>
+        <section class="contact-form-section">
+            <div class="contact-form-container">
+                <h2>Contáctanos</h2>
+                <form action="https://formsubmit.co/gibranyjason@gmail.com" method="POST" />
+                    <div class="contact-form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" class="contact-form-input" required>
+                    </div>
+                    
+                    <div class="contact-form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="contact-form-input" required>
+                    </div>
+                    
+                    <div class="contact-form-group">
+                        <label for="phone">Teléfono:</label>
+                        <input type="tel" id="phone" name="phone" class="contact-form-input" required>
+                    </div>
+                    
+                    <div class="contact-form-group">
+                        <label for="service">Selecciona el servicio:</label>
+                        <select id="service" name="service" class="contact-form-select" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="servicio1">Opción 1</option>
+                            <option value="servicio2">Opción 2</option>
+                            <option value="servicio3">Opción 3</option>
+                        </select>
+                    </div>
+                    
+                    <div class="contact-form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" class="contact-form-textarea" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="contact-form-button">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Quiénes Somos</h2>
+                <p>En Gruas DS, nuestro enfoque en el Análisis y Gestión de izajes, y el arriendo de gruas y equipos de carga. Nos lleva a que Nuestra prioridad es la seguridad, la excelencia y el liderazgo en cada proyecto que emprendemos.</p>
+                <p>Nuestro equipo de técnicos, altamente calificados y experto en izaje, ofrece un servicio integral. Desde la visita técnica hasta la culminación de la maniobra, estamos a tu lado, asegurando resultados impecables.</p>
+                <p>Nuestros clientes de todos los sectores que requieren izaje y montaje industrial. Con un compromiso inquebrantable y un profundo orgullo por lo que hacemos, en Gruas DS garantizamos soluciones que superan tus expectativas.</p>
+            </div>
+        </section>
+        
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Servicios</h2>
+                <div class="service">
+                    <h3>Remolque de Vehículos</h3>
+                    <p>Ofrecemos servicios de remolque 24/7 para vehículos de todos los tamaños.</p>
+                </div>
+                <div class="service">
+                    <h3>Transporte de Maquinaria</h3>
+                    <p>Nuestro equipo está equipado para manejar el transporte de maquinaria pesada de manera segura y eficiente.</p>
+                </div>
+                <div class="service">
+                    <h3>Asistencia en Carretera</h3>
+                    <p>Proporcionamos asistencia en carretera para solucionar problemas comunes y llevar su vehículo a un lugar seguro.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="mission" class="mission-section">
+            <div class="container">
+                <h2>Nuestra Misión</h2>
+                <p>En Gruas DS, nuestra misión es ofrecer servicios de izaje, con un compromiso inquebrantable hacia la seguridad de la carga y las personas. Nos dedicamos a satisfacer las necesidades del cliente mediante soluciones innovadoras y fiables, garantizando excelencia y plena satisfacción desde la visita técnica hasta la culminación de cada maniobra.</p>
+            </div>
+        </section>
+        
+        <section id="vision" class="vision-section">
+            <div class="container">
+                <h2>Nuestra Visión</h2>
+                <p>En Gruas DS, aspiramos a ser reconocidos como la empresa más segura y confiable en el ámbito de izaje. Nuestro objetivo es establecer nuevos estándares en seguridad y excelencia, garantizando la protección de cada carga y la seguridad de todos los involucrados. Nos comprometemos a superar las expectativas de nuestros clientes, proporcionando soluciones innovadoras y fiables que aseguren su plena satisfacción. Queremos ser el referente en confianza y seguridad en el sector, construyendo relaciones duraderas basadas en nuestro inquebrantable compromiso con la calidad y la protección.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GruasDS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Botón flotante de WhatsApp -->
+<a href="https://wa.link/gxty6g" class="whatsapp-button" target="_blank">
+    <img src="./assent/img/whatsapp (1).png" alt="WhatsApp">
+</a>
+
+</body>
+</html>
