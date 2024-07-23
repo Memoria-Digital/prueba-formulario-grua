@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GruasDS</title>
     <link rel="stylesheet" href="./assent/css/index.css">
-    <script defer src="./assent/js/index.js""></script>
+    <script defer src="./assent/js/index.js"></script>
     <link rel="stylesheet" href="./assent/css/form.css">
     <link rel="icon" href="./assent/img/logo-gruas-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assent/css/servicios.css">
+    <link rel="stylesheet" href="./assent/css/agendar.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // no sale el / index
+            if (window.location.pathname === '/index.html') {
+                window.location.replace('/');
+            }
+        });
+    </script>
 </head>
 
 <body>
-    <header>
+    <header class="fixed-top">
         <div class="container">
             <div class="logo">
                 <img src="./assent/img/logo-gruas-removebg-preview.png" alt="GruasDS Logo">
@@ -31,14 +42,14 @@
             <div class="back-arrow" onclick="hideMenu()">←</div>
             <ul>
                 <li><a href="#about" onclick="hideMenu()">Quiénes Somos</a></li>
-                <li><a href="#services" onclick="hideMenu()">Servicios</a></li>
+                <li><a href="#services" onclick="hideMenu()"> Servicios</a></li>
                 <li><a href="#mission" onclick="hideMenu()">Nuestra Misión</a></li>
                 <li><a href="#vision" onclick="hideMenu()">Nuestra Visión</a></li>
                 <li><a href="#contact" onclick="hideMenu()">Contacto</a></li>
             </ul>
         </div>
     </header>
-    
+
     <section class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
@@ -47,10 +58,10 @@
         </div>
     </section>
     <main>
-        <section class="contact-form-section">
+        <section class="contact-form-section color-contacto">
             <div class="contact-form-container">
                 <h2>Contáctanos</h2>
-                <form action="https://formsubmit.co/gibranetiel12345@gmail.com" method="POST" />
+                <form action="https://formsubmit.co/gibranetiel12345@gmail.com" method="POST">
                     <div class="contact-form-group">
                         <label for="name">Nombre:</label>
                         <input type="text" id="name" name="name" class="contact-form-input" required>
@@ -83,64 +94,86 @@
                     
                     <button type="submit" class="contact-form-button">Enviar</button>
                     <input type="hidden" name="_next" value="https://memoria-digital.github.io/prueba-formulario-grua/">
-                    <input type="hidden" name="_captcha" value="false"><input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_captcha" value="false">
                 </form>
             </div>
         </section>
-    </main>
 
-    <main>
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>Quiénes Somos</h2>
-                <p>En Gruas DS, nuestro enfoque en el Análisis y Gestión de izajes, y el arriendo de gruas y equipos de carga. Nos lleva a que Nuestra prioridad es la seguridad, la excelencia y el liderazgo en cada proyecto que emprendemos.</p>
-                <p>Nuestro equipo de técnicos, altamente calificados y experto en izaje, ofrece un servicio integral. Desde la visita técnica hasta la culminación de la maniobra, estamos a tu lado, asegurando resultados impecables.</p>
-                <p>Nuestros clientes de todos los sectores que requieren izaje y montaje industrial. Con un compromiso inquebrantable y un profundo orgullo por lo que hacemos, en Gruas DS garantizamos soluciones que superan tus expectativas.</p>
-            </div>
-        </section>
-        
         <section id="services" class="services-section">
             <div class="container">
-                <h2>Servicios</h2>
-                <div class="service">
-                    <h3>Remolque de Vehículos</h3>
-                    <p>Ofrecemos servicios de remolque 24/7 para vehículos de todos los tamaños.</p>
-                </div>
-                <div class="service">
-                    <h3>Transporte de Maquinaria</h3>
-                    <p>Nuestro equipo está equipado para manejar el transporte de maquinaria pesada de manera segura y eficiente.</p>
-                </div>
-                <div class="service">
-                    <h3>Asistencia en Carretera</h3>
-                    <p>Proporcionamos asistencia en carretera para solucionar problemas comunes y llevar su vehículo a un lugar seguro.</p>
+                <h2>Nuestros Servicios</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100">
+                            <img src="./assent/img/grua.jpg" class="card-img-top" alt="Remolque de Vehículos">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Remolque de Vehículos</h5>
+                                <p class="card-text">Ofrecemos servicios de remolque 24/7 para vehículos de todos los tamaños.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100">
+                            <img src="./assent/img/transporte-de-Maquinaria.webp" class="card-img-top" alt="Transporte de Maquinaria">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Transporte de Maquinaria</h5>
+                                <p class="card-text">Nuestro equipo está equipado para manejar el transporte de maquinaria pesada de manera segura y eficiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100">
+                            <img src="./assent/img/asistencia-carretera-01.jpg" class="card-img-top" alt="Asistencia en Carretera">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Asistencia en Carretera</h5>
+                                <p class="card-text">Proporcionamos asistencia en carretera para solucionar problemas comunes y llevar su vehículo a un lugar seguro.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <section id="mission" class="mission-section">
+
+        <section id="about" class="about-section">
             <div class="container">
-                <h2>Nuestra Misión</h2>
-                <p>En Gruas DS, nuestra misión es ofrecer servicios de izaje, con un compromiso inquebrantable hacia la seguridad de la carga y las personas. Nos dedicamos a satisfacer las necesidades del cliente mediante soluciones innovadoras y fiables, garantizando excelencia y plena satisfacción desde la visita técnica hasta la culminación de cada maniobra.</p>
-            </div>
-        </section>
-        
-        <section id="vision" class="vision-section">
-            <div class="container">
-                <h2>Nuestra Visión</h2>
-                <p>En Gruas DS, aspiramos a ser reconocidos como la empresa más segura y confiable en el ámbito de izaje. Nuestro objetivo es establecer nuevos estándares en seguridad y excelencia, garantizando la protección de cada carga y la seguridad de todos los involucrados. Nos comprometemos a superar las expectativas de nuestros clientes, proporcionando soluciones innovadoras y fiables que aseguren su plena satisfacción. Queremos ser el referente en confianza y seguridad en el sector, construyendo relaciones duraderas basadas en nuestro inquebrantable compromiso con la calidad y la protección.</p>
+                <h2>¿QUIERES AGENDAR?</h2>
+                <p>Se recomienda cotizar y agendar el servicio de arriendo con un mínimo de 2-3 días, ya que, si bien nuestra intención siempre será cubrir su requerimiento, contamos con disponibilidad diaria de grúas reducida, y si la necesita de inmediato es posible que no podamos prestar el servicio.
+    
+                    Arriendo de gruas horquilla con operador y combustible por horas en Macul, Ñuñoa, Providencia, Vitacura, Las Condes, Santiago Centro, Peñalolen, San Joaquin, La Granja, Cerrillos, Cerro Navia, Conchalí, El Bosque, Estación Central, Huechuraba, Independencia, La Cisterna, La Florida, La Granja, La Pintana, La Reina, Las Condes, Lo Barnechea, Lo Espejo, Lo Prado, Macul, Maipú, Ñuñoa, Pedro Aguirre Cerda, Peñalolén, Providencia, Pudahuel, Quilicura, Quinta Normal, Recoleta, Renca, San Joaquín, San Miguel, San Ramón, Santiago y Vitacura.
+                    
+                    Arriendo de Yales, Arriendo de Gruas Horquilla, Arriendo Grua Horquilla con Operador, Arriendo Por Temporadas</p>
+               
+                </div>
             </div>
         </section>
     </main>
     
     <footer>
         <div class="container">
-            <p>&copy; 2024 GruasDS. Todos los derechos reservados.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2023 GruasDS. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="./assent/iconos/FB_icon-icons.com_65534.png" alt="Facebook" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="./assent/iconos/INSTAGRAM_icon-icons.com_65535 (1).png" alt="Twitter" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="./assent/iconos/TWITTER_icon-icons.com_65536.png" alt="Instagram" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="mailto:contacto@gruasds.com" target="_blank">
+                        <img src="./assent/iconos/GMAIL_icon-icons.com_65540.png" alt="Email" style="width: 24px;">
+                    </a>
+                </div>
+            </div>
         </div>
+    </div>
     </footer>
-    <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.link/gxty6g" class="whatsapp-button" target="_blank">
-    <img src="./assent/img/whatsapp (1).png" alt="WhatsApp">
-</a>
-
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
+  
 }
 
 .contact-form-container {
@@ -38,7 +39,7 @@
 }
 
 .contact-form-button {
-    background-color: #4CAF50;
+    background-color: #a30d0d;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -47,5 +48,5 @@
 }
 
 .contact-form-button:hover {
-    background-color: #45a049;
+    background-color: #cc1515;
 }
