@@ -235,3 +235,23 @@ header a:hover {
     color: rgb(0, 0, 0); /* Color del texto al pasar el ratón */
     transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
+.cta-button {
+    background-color: #242f3b; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: 2px solid white; /* Bordes blancos */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 10px 30px; /* Tamaño del botón */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px; /* Espacio arriba del botón */
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #cf1818; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Efecto al pasar el ratón */
+    color: #000000;
+}
