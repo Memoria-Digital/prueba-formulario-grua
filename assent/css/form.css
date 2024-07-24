@@ -3,8 +3,10 @@
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
+    color: #4d4747;
   
 }
+
 
 .contact-form-container {
     display: flex;
@@ -30,23 +32,47 @@
 .contact-form-textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #631111;
     border-radius: 4px;
+    background-color: rgb(255, 255, 255);
 }
 
 .contact-form-textarea {
     resize: vertical;
 }
 
+
 .contact-form-button {
-    background-color: #a30d0d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(123, 16, 16));
+    color: white; /* Color del texto */
+    border: 2px solid rgb(158, 25, 25); /* Bordes blancos */
+    border-radius: 25px; /* Bordes redondeados para un botón redondo */
+    padding: 10px 30px; /* Tamaño del botón (más alargado) */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center;
+    display: inline-block;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.contact-form-button:hover {
-    background-color: #cc1515;
+.contact-form-button  {
+    background-color:#cc1515;
+    transform: scale(1.05); /* Efecto al pasar el ratón */
+}
+.highlight-link {
+    border: 2px solid white;
+    border-radius: 15px; /* Ajusta el valor para hacer el borde más o menos redondo */
+    padding: 5px 10px; /* Ajusta el padding para hacer el borde más ancho o estrecho */
+    color: white; /* Color del texto */
+    background-color: transparent; /* Fondo transparente */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.highlight-link:hover {
+    background-color: white; /* Color de fondo al pasar el ratón */
+    color: #020000; /* Color del texto al pasar el ratón */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+.color-contacto{
+    background-color: rgba(255, 255, 255, 0.555);
 }

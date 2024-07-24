@@ -8,8 +8,8 @@ body {
 }
 
 header {
-    background: #a30d0d;
-    color: white;
+   background: linear-gradient(0deg, rgb(0, 0, 0), rgb(123, 16, 16));
+    color: #FFFFFF;
     padding: 10px 0;
     position: relative;
 }
@@ -58,7 +58,7 @@ nav ul li a {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #810e0e;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(123, 16, 16));
     transition: left 0.3s ease;
     z-index: 1000;
 }
@@ -95,12 +95,18 @@ nav ul li a {
 }
 
 .mobile-menu ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     display: block;
     font-size: 24px;
 }
 
+.mobile-menu:hover  {
+    color: rgb(7, 0, 0);
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+}
 .hero {
     position: relative;
 background: url('https://i.postimg.cc/sgPG8Fb2/grua-1.jpg') no-repeat center center/cover;
@@ -214,3 +220,18 @@ footer a:focus {
 }
 
 /* footerr */
+header a {
+    
+    color: white; /* Color del texto */
+    background-color: transparent; /* Fondo transparente */
+    text-decoration: none; /* Sin subrayado */
+}
+
+header a:hover {
+    border: 2px solid white;
+    border-radius: 15px; /* Ajusta el valor para hacer el borde más o menos redondo */
+    padding: 5px 10px; /* Ajusta el padding para hacer el borde más ancho o estrecho */
+    background-color: white; /* Color de fondo al pasar el ratón */
+    color: rgb(0, 0, 0); /* Color del texto al pasar el ratón */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
