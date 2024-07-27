@@ -73,7 +73,7 @@ nav ul li a {
     left: 10px;
     font-size: 28px;
     cursor: pointer;
-    color: white;
+    color: rgb(249, 249, 249);
 }
 
 .mobile-menu ul {
@@ -95,7 +95,7 @@ nav ul li a {
 }
 
 .mobile-menu ul li a {
-    color: rgb(0, 0, 0);
+    color: rgb(241, 233, 233);
     text-decoration: none;
     display: block;
     font-size: 24px;
@@ -220,14 +220,14 @@ footer a:focus {
 }
 
 /* footerr */
-header a {
+.color-header{
     
     color: white; /* Color del texto */
     background-color: transparent; /* Fondo transparente */
     text-decoration: none; /* Sin subrayado */
 }
 
-header a:hover {
+.color-header:hover {
     border: 2px solid white;
     border-radius: 15px; /* Ajusta el valor para hacer el borde más o menos redondo */
     padding: 5px 10px; /* Ajusta el padding para hacer el borde más ancho o estrecho */
