@@ -3,7 +3,7 @@
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
-    color: #4d4747;
+    color: #efebeb;
   
 }
 
@@ -32,9 +32,9 @@
 .contact-form-textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #631111;
+    border: 1px solid #a12c2c;
     border-radius: 4px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(239, 233, 233);
 }
 
 .contact-form-textarea {
@@ -45,7 +45,7 @@
 .contact-form-button {
     background: linear-gradient(0deg, rgb(0, 0, 0), rgb(123, 16, 16));
     color: white; /* Color del texto */
-    border: 2px solid rgb(158, 25, 25); /* Bordes blancos */
+    border: 2px solid rgba(158, 25, 25, 0.833); /* Bordes blancos */
     border-radius: 25px; /* Bordes redondeados para un botón redondo */
     padding: 10px 30px; /* Tamaño del botón (más alargado) */
     font-size: 16px; /* Tamaño del texto */
@@ -74,5 +74,5 @@
     transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
 .color-contacto{
-    background-color: rgba(255, 255, 255, 0.555);
+    background-color: rgb(0, 0, 0);
 }

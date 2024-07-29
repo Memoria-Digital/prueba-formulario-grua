@@ -21,7 +21,7 @@ header .container {
 }
 
 header .logo img {
-    max-height: 80px; /* Ajusta el tamaño de la imagen del logo */
+    max-height: 100px; /* Ajusta el tamaño de la imagen del logo */
 }
 
 nav ul {

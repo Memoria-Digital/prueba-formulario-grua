@@ -12,7 +12,27 @@
     <link rel="stylesheet" href="./assent/css/agendar.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
-       
+        body {
+            padding-top: 100px; /* Ajusta el valor según la altura de tu header */
+        }
+        header.fixed-top {
+            background-color: white; /* Fondo blanco para el header */
+            z-index: 1030; /* Para asegurar que el header esté siempre por encima del contenido */
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para distinguir el header del contenido */
+        }
+        .logo img {
+            max-height: 50px; /* Ajusta el tamaño del logo si es necesario */
+        }
+        .menu-icon {
+            cursor: pointer;
+        }
+        .whatsapp-button img {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            width: 50px;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -28,16 +48,16 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html"> <!-- Enlace al que dirigirá la imagen del logo -->
-                    <img src="./assent/img/logo-gruas-removebg-preview.png" alt="GruasDS Logo">
+                    <img src="./assent/img/WhatsApp_Image_2024-07-23_at_5.06.39_PM-removebg-preview.png" alt="GruasDS Logo">
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#about">Quiénes Somos</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#mission">Nuestra Misión</a></li>
-                    <li><a href="#vision">Nuestra Visión</a></li>
-                    <li><a href="#contact" class="highlight-link">Cotizar Arriendo Maquinaria</a></li>
+                    <li><a class="color-header" href="#about">Quiénes Somos</a></li>
+                    <li><a class="color-header" href="#services">Servicios</a></li>
+                    <li><a class="color-header" href="#mission">Nuestra Misión</a></li>
+                    <li><a class="color-header" href="#vision">Nuestra Visión</a></li>
+                    <li><a href="./contactanos.html" class="highlight-link color-header">Cotizar Arriendo Maquinaria</a></li>
                 </ul>
             </nav>
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
@@ -45,21 +65,15 @@
         <div class="mobile-menu">
             <div class="back-arrow" onclick="hideMenu()">←</div>
             <ul>
-                <li><a href="#about" onclick="hideMenu()">Quiénes Somos</a></li>
-                <li><a href="#services" onclick="hideMenu()"> Servicios</a></li>
-                <li><a href="#mission" onclick="hideMenu()">Nuestra Misión</a></li>
-                <li><a href="#vision" onclick="hideMenu()">Nuestra Visión</a></li>
-                <li><a href="contactanos.html" onclick="hideMenu()">Contacto</a></li>
+                <li><a class="color-header" href="#about" onclick="hideMenu()">Quiénes Somos</a></li>
+                <li><a class="color-header" href="#services" onclick="hideMenu()"> Servicios</a></li>
+                <li><a class="color-header" href="#mission" onclick="hideMenu()">Nuestra Misión</a></li>
+                <li><a class="color-header" href="#vision" onclick="hideMenu()">Nuestra Visión</a></li>
+                <li><a class="color-header" href="/contactanos.html" onclick="hideMenu()">Contacto</a></li>
             </ul>
         </div>
     </header>
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h2>Ofrecemos nuestros servicios de</h2>
-            <h1>Arriendo de Grúas</h1>
-        </div>
-    </section>
+    
     <main class="color-contacto">
         <section class="contact-form-section color-contacto">
             <div class="contact-form-container">
@@ -84,9 +98,9 @@
                         <label for="service">Selecciona el servicio:</label>
                         <select id="service" name="service" class="contact-form-select" required>
                             <option value="">Selecciona un servicio</option>
-                            <option value="servicio1">Opción 1</option>
-                            <option value="servicio2">Opción 2</option>
-                            <option value="servicio3">Opción 3</option>
+                            <option value="servicio1">Grúa Horquilla</option>
+                            <option value="servicio2">Camión Pluma</option>
+                            <option value="servicio3">Superior Izaje</option>
                         </select>
                     </div>
                     
