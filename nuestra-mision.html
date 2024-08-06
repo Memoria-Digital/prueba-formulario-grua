@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GruasDS</title>
+    <link rel="stylesheet" href="./assent/css/index.css">
+    <script defer src="./assent/js/index.js"></script>
+    <link rel="stylesheet" href="./assent/css/form.css">
+    <link rel="icon" href="./assent/img/logo-gruas-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assent/css/servicios.css">
+    <link rel="stylesheet" href="./assent/css/agendar.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #646363;
+    margin: 0;
+}
+
+.content {
+    flex: 1;
+    margin-top: 20px; /* Ajusta según sea necesario */
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima del fondo */
+}
+
+.background-section {
+    background-color: #646363;
+    padding: 20px; /* Reduce el padding para que el contenido suba más */
+    color: #ffffff;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima del fondo */
+}
+
+.background-section img {
+    margin-top: 10px; /* Ajusta según sea necesario */
+    max-width: 100%;
+    height: auto;
+}
+
+.borde {
+    border-radius: 20%;
+}
+
+footer {
+    background: #000000;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.v-background {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajusta según tus necesidades */
+    background: linear-gradient(to bottom right, #e24031, #2f293f);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    z-index: -1; /* Para asegurarse de que el fondo esté detrás del contenido */
+}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.pathname === '/index.html') {
+                window.location.replace('/');
+            }
+        });
+
+        function goToSection(section) {
+            if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
+                window.location.href = `/index.html#${section}`;
+            } else {
+                document.querySelector(`#${section}`).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function hideMenu() {
+            // Aquí va tu lógica para ocultar el menú
+        }
+    </script>
+</head>
+<body>
+    <div class="v-background"></div>
+    <header class="fixed-top">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assent/img/WhatsApp_Image_2024-07-23_at_5.06.39_PM-removebg-preview.png" alt="GruasDS Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="color-header" href="./quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a class="color-header" href="/index.html">Servicios</a></li>
+                    <li><a class="color-header" href="/nuestra-mision.html">Nuestra Misión</a></li>
+                    <li><a class="color-header" href="/">Nuestra Visión</a></li>
+                    <li><a  href="./contactanos.html" class="highlight-link color-header">Cotizar Servicio</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </div>
+        <div class="mobile-menu">
+            <div class="back-arrow" onclick="hideMenu()">←</div>
+            <ul>
+                <li><a class="color-header " href="/quienes-somos.html" onclick="hideMenu()">Quiénes Somos</a></li>
+                <li><a class="color-header" href="/index.html" onclick="hideMenu()"> Servicios</a></li>
+                <li><a class="color-header" href="/nuestra-mision.html" onclick="hideMenu()">Nuestra Misión</a></li>
+                <li><a class="color-header" href="#vision" onclick="hideMenu()">Nuestra Visión</a></li>
+                <li><a class="color-header" href="/contactanos.html" onclick="hideMenu()">Contáctanos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="content">
+        
+        <div class="container background-section">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <img class="borde img-fluid" src="./assent/img/GRUA GRANDE.JPG" alt="Descripción de la imagen">
+                </div>
+                <div class="col-md-6">
+                    <h1>Nuestra Misión</h1>
+                    <p>En Gruas DS, nuestra misión es ofrecer servicios de izaje con un compromiso inquebrantable hacia la seguridad de la carga y las personas.</p>
+
+                    <p>Aspiramos a ser reconocidos como la empresa más segura y confiable en el ámbito de izaje, estableciendo nuevos estándares en seguridad y excelencia.</p>
+                    
+                    <p>Nos dedicamos a satisfacer las necesidades del cliente mediante soluciones innovadoras y fiables, garantizando la plena satisfacción desde la visita técnica hasta la culminación de cada maniobra.</p>
+                    
+                    <p>Nuestro objetivo es superar las expectativas de nuestros clientes y ser el referente en confianza y seguridad en el sector, construyendo relaciones duraderas basadas en nuestro insuperable compromiso con la calidad y la protección.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2024 GruasDS. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="./assent/iconos/FB_icon-icons.com_65534.png" alt="Facebook" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="./assent/iconos/TWITTER_icon-icons.com_65536.png" alt="Twitter" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="./assent/iconos/INSTAGRAM_icon-icons.com_65535 (1).png" alt="Instagram" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="mailto:contacto@gruasds.com" target="_blank">
+                        <img src="./assent/iconos/GMAIL_icon-icons.com_65540.png" alt="Email" style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://w.app/GruasDs" class="whatsapp-button" target="_blank">
+        <img src="./assent/img/whatsapp (1).png" alt="WhatsApp">
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

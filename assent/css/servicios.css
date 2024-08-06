@@ -40,6 +40,7 @@ body {
     justify-content: space-between;
     
     
+    
 }
 
 .card-img-top {
@@ -54,4 +55,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
    
+}
+@media (min-width: 992px) {
+    .card-margin {
+        margin-top: 30px;
+    }
+}
+.card-center {
+
+justify-content: center;
 }

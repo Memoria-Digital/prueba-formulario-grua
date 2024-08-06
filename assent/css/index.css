@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: #f0f0f0;
+    background: #635555;
     color: #333;
     margin: 0;
     padding: 0;
@@ -156,7 +156,7 @@ background: url('https://i.postimg.cc/sgPG8Fb2/grua-1.jpg') no-repeat center cen
 }
 
 footer {
-    background: #333;
+    background: #000000;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -255,4 +255,8 @@ footer a:focus {
     background-color: #cf1818; /* Color de fondo al pasar el ratón */
     transform: scale(1.05); /* Efecto al pasar el ratón */
     color: #000000;
+}
+.colores{ color: #000000;}
+.fondo-gris{
+    background-color: #646363;
 }

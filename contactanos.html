@@ -12,26 +12,58 @@
     <link rel="stylesheet" href="./assent/css/agendar.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
         body {
+            display: flex;
+            flex-direction: column;
             padding-top: 100px; /* Ajusta el valor según la altura de tu header */
         }
+
+        main {
+            flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+        }
+
+        footer {
+            background-color: #303031; /* Puedes ajustar el color de fondo del footer si lo deseas */
+            padding: 20px 0;
+            text-align: center;
+        }
+
         header.fixed-top {
             background-color: white; /* Fondo blanco para el header */
             z-index: 1030; /* Para asegurar que el header esté siempre por encima del contenido */
             width: 100%;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para distinguir el header del contenido */
         }
+
         .logo img {
             max-height: 50px; /* Ajusta el tamaño del logo si es necesario */
         }
+
         .menu-icon {
             cursor: pointer;
         }
+
         .whatsapp-button img {
             position: fixed;
             bottom: 15px;
             right: 15px;
             width: 50px;
+        }
+
+        /* Estilos personalizados para el modal */
+        .modal-dialog-centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .modal-content {
+            margin: auto;
         }
     </style>
     <script>
@@ -53,11 +85,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a class="color-header" href="#about">Quiénes Somos</a></li>
-                    <li><a class="color-header" href="#services">Servicios</a></li>
-                    <li><a class="color-header" href="#mission">Nuestra Misión</a></li>
+                    <li><a class="color-header" href="/quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a class="color-header" href="index.html">Servicios</a></li>
+                    <li><a class="color-header" href="/nuestra-mision.html">Nuestra Misión</a></li>
                     <li><a class="color-header" href="#vision">Nuestra Visión</a></li>
-                    <li><a href="./contactanos.html" class="highlight-link color-header">Cotizar Arriendo Maquinaria</a></li>
+                    <li><a href="./contactanos.html" class="highlight-link color-header">Cotizar Servicio</a></li>
                 </ul>
             </nav>
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
@@ -65,11 +97,11 @@
         <div class="mobile-menu">
             <div class="back-arrow" onclick="hideMenu()">←</div>
             <ul>
-                <li><a class="color-header" href="#about" onclick="hideMenu()">Quiénes Somos</a></li>
-                <li><a class="color-header" href="#services" onclick="hideMenu()"> Servicios</a></li>
-                <li><a class="color-header" href="#mission" onclick="hideMenu()">Nuestra Misión</a></li>
+                <li><a class="color-header" href="/quienes-somos.html" onclick="hideMenu()">Quiénes Somos</a></li>
+                <li><a class="color-header" href="/index.html" onclick="hideMenu()"> Servicios</a></li>
+                <li><a class="color-header" href="/nuestra-mision.html" onclick="hideMenu()">Nuestra Misión</a></li>
                 <li><a class="color-header" href="#vision" onclick="hideMenu()">Nuestra Visión</a></li>
-                <li><a class="color-header" href="/contactanos.html" onclick="hideMenu()">Contacto</a></li>
+                <li><a class="color-header" href="/contactanos.html" onclick="hideMenu()">Contáctanos</a></li>
             </ul>
         </div>
     </header>
@@ -78,7 +110,7 @@
         <section class="contact-form-section color-contacto">
             <div class="contact-form-container">
                 <h2>Contáctanos</h2>
-                <form action="https://formsubmit.co/gibranetiel12345@gmail.com" method="POST">
+                <form id="contactForm" action="https://formsubmit.co/gibranetiel12345@gmail.com" method="POST">
                     <div class="contact-form-group">
                         <label for="name">Nombre:</label>
                         <input type="text" id="name" name="name" class="contact-form-input" required>
@@ -115,33 +147,73 @@
                 </form>
             </div>
         </section>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>© 2023 GruasDS. Todos los derechos reservados.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="https://facebook.com" target="_blank">
-                            <img src="./assent/iconos/FB_icon-icons.com_65534.png" alt="Facebook" style="width: 24px; margin-right: 10px;">
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                            <img src="./assent/iconos/TWITTER_icon-icons.com_65536.png" alt="Twitter" style="width: 24px; margin-right: 10px;">
-                        </a>
-                        <a href="https://instagram.com" target="_blank">
-                            <img src="./assent/iconos/INSTAGRAM_icon-icons.com_65535 (1).png" alt="Instagram" style="width: 24px; margin-right: 10px;">
-                        </a>
-                        <a href="mailto:contacto@gruasds.com" target="_blank">
-                            <img src="./assent/iconos/GMAIL_icon-icons.com_65540.png" alt="Email" style="width: 24px;">
-                        </a>
-                    </div>
+        
+    </main>
+    
+    <footer>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2023 GruasDS. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="./assent/iconos/FB_icon-icons.com_65534.png" alt="Facebook" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="./assent/iconos/TWITTER_icon-icons.com_65536.png" alt="Twitter" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="./assent/iconos/INSTAGRAM_icon-icons.com_65535 (1).png" alt="Instagram" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="mailto:contacto@gruasds.com" target="_blank">
+                        <img src="./assent/iconos/GMAIL_icon-icons.com_65540.png" alt="Email" style="width: 24px;">
+                    </a>
                 </div>
             </div>
-        </footer>
-        <a href="https://wa.link/gxty6g" class="whatsapp-button" target="_blank">
-            <img src="./assent/img/whatsapp (1).png" alt="WhatsApp">
-        </a>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    </body>
+        </div>
+    </footer>
+    
+ 
+
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Mensaje Enviado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="./assent/img/paquete.png" alt="Check Icon" style="width: 40px;"/>
+                    <p>¡Tu mensaje ha sido enviado con éxito!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('#contactForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Previene el envío estándar del formulario
+                // Aquí podrías hacer una llamada AJAX si deseas enviar los datos sin recargar la página
+
+                // Muestra el modal
+                var myModal = new bootstrap.Modal(document.getElementById('successModal'));
+                myModal.show();
+
+                // Opcional: Envía el formulario después de mostrar el modal
+                setTimeout(function() {
+                    form.submit(); // Envía el formulario
+                }, 2000); // Ajusta el tiempo si es necesario
+            });
+        });
+    </script>
+</body>
 </html>
