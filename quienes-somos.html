@@ -12,56 +12,68 @@
     <link rel="stylesheet" href="./assent/css/agendar.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #646363;
-    margin: 0;
-}
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #646363;
+            margin: 0;
+        }
 
-.content {
-    flex: 1;
-    margin-top: 20px; /* Ajusta según sea necesario */
-    position: relative;
-    z-index: 1; /* Asegura que el contenido esté encima del fondo */
-}
+        .content {
+            flex: 1;
+            margin-top: 20px; /* Ajusta según sea necesario */
+            position: relative;
+            z-index: 1; /* Asegura que el contenido esté encima del fondo */
+        }
 
-.background-section {
-    background-color: #646363;
-    padding: 20px; /* Reduce el padding para que el contenido suba más */
-    color: #ffffff;
-    position: relative;
-    z-index: 1; /* Asegura que el contenido esté encima del fondo */
-}
+        .background-section {
+            background-color: #646363;
+            padding: 20px; /* Reduce el padding para que el contenido suba más */
+            color: #ffffff;
+            position: relative;
+            z-index: 1; /* Asegura que el contenido esté encima del fondo */
+        }
 
-.background-section img {
-    margin-top: 10px; /* Ajusta según sea necesario */
-    max-width: 100%;
-    height: auto;
-}
+        .background-section img {
+            margin-top: 10px; /* Ajusta según sea necesario */
+            max-width: 100%;
+            height: auto;
+        }
 
-.borde {
-    border-radius: 20%;
-}
+        .borde {
+            border-radius: 20%;
+        }
 
-footer {
-    background: #000000;
-    color: white;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+        footer {
+            background: #000000;
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
 
-.v-background {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Ajusta según tus necesidades */
-    background: linear-gradient(to bottom right, #e24031, #2f293f);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-    z-index: -1; /* Para asegurarse de que el fondo esté detrás del contenido */
-}
+        .v-background {
+            position: relative;
+            width: 100%;
+            height: 400px; /* Ajusta según tus necesidades */
+            background: linear-gradient(to bottom right, #000000, #000000);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+            z-index: -1; /* Para asegurarse de que el fondo esté detrás del contenido */
+        }
+
+        /* Estilo para pantallas pequeñas (móviles) */
+        @media (max-width: 767px) {
+            .background-section .row {
+                flex-direction: column; /* Cambia la dirección del flex a columna en móviles */
+                text-align: center; /* Centra el texto y la imagen en móviles */
+            }
+
+            .background-section img {
+                margin-top: 20px; /* Ajusta el margen superior para que la imagen quede debajo del texto */
+            }
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -118,17 +130,16 @@ footer {
     </header>
 
     <div class="content">
-        
         <div class="container background-section">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                    <img class="borde img-fluid" src="./assent/img/GRUA GRANDE.JPG" alt="Descripción de la imagen">
-                </div>
-                <div class="col-md-6">
                     <h1>Quiénes Somos</h1>
                     <p>Nos especializamos en el análisis y gestión de izajes, así como en el arriendo de grúas y equipos de carga. Nuestra prioridad es la seguridad, la excelencia y el liderazgo en cada proyecto que emprendemos.</p>
                     <p>Nuestro equipo de técnicos, altamente calificados y expertos en izaje, ofrece un servicio integral. Desde la visita técnica hasta la culminación de la maniobra, estamos a tu lado, asegurando resultados impecables.</p>
                     <p>Con un compromiso inquebrantable y un profundo orgullo por lo que hacemos, en Gruas DS garantizamos soluciones que superan tus expectativas.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img class="borde img-fluid" src="./assent/img/GRUA GRANDE.JPG" alt="Descripción de la imagen">
                 </div>
             </div>
         </div>
