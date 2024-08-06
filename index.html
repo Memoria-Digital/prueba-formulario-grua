@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GruasDS</title>
+    <link rel="stylesheet" href="./assent/css/index.css">
+    <script defer src="./assent/js/index.js"></script>
+    <link rel="stylesheet" href="./assent/css/form.css">
+    <link rel="icon" href="./assent/img/logo-gruas-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assent/css/servicios.css">
+    <link rel="stylesheet" href="./assent/css/agendar.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.pathname === '/index.html') {
+                window.location.replace('/');
+            }
+        });
+    </script>
+</head>
+
+<body class="fondo-gris">
+    <header class="fixed-top">
+  <div class="container">
+        <div class="logo">
+            <a href="index.html"> <!-- Enlace al que dirigirá la imagen del logo -->
+                <img src="./assent/img/WhatsApp_Image_2024-07-23_at_5.06.39_PM-removebg-preview.png" alt="GruasDS Logo">
+            </a>
+        </div>
+            <nav>
+                <ul>
+                    <li><a class="color-header" href="./quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a class="color-header" href="#services">Servicios</a></li>
+                    <li><a class="color-header" href="/nuestra-mision.html">Nuestra Misión</a></li>
+                    <li><a class="color-header" href="/">Nuestra Visión</a></li>
+                    <li><a  href="./contactanos.html" class="highlight-link color-header">Cotizar Servicio</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </div>
+        <div class="mobile-menu">
+            <div class="back-arrow" onclick="hideMenu()">←</div>
+            <ul>
+                <li><a class="color-header" href="/quienes-somos.html" onclick="hideMenu()">Quiénes Somos</a></li>
+                <li><a class="color-header" href="#services" onclick="hideMenu()"> Servicios</a></li>
+                <li><a class="color-header" href="/nuestra-mision.html" onclick="hideMenu()">Nuestra Misión</a></li>
+                <li><a class="color-header" href="#vision" onclick="hideMenu()">Nuestra Visión</a></li>
+                <li><a class="color-header" href="/contactanos.html" onclick="hideMenu()">Contáctanos</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h2>Ofrecemos nuestros servicios de</h2>
+            <h1>Arriendo de Grúas</h1>
+            <a href="./contactanos.html" class="cta-button">Cotizar Servicio</a>
+        </div>
+    </section>
+    <main>
+       
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100 card-margin">
+                            <img src="./assent/img/YALE.jpeg" class="card-img-top" alt="Remolque de Vehículos">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Grua Horquilla</h5>
+                                <p class="card-text"> Ofrecemos alquiler de grúas horquilla bien mantenidas y listas para trabajar. Ideal para manejar cargas pesadas y garantizar la eficiencia en tu trabajo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100 card-margin">
+                            <img src="./assent/img/IMG_2194.JPG" class="card-img-top" alt="Transporte de Maquinaria">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Camión Pluma</h5>
+                                <p class="card-text">Ofrecemos alquiler de camiones pluma, ideales para levantar y trasladar cargas pesadas con precisión y seguridad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100 card-margin">
+                            <img src="./assent/img/WhatsApp Image 2024-07-28 at 6.37.57 PM (1).jpeg" class="card-img-top" alt="Asistencia en Carretera">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Grúa Telescópica</h5>
+                                <p class="card-text">Ofrecemos alquiler de grúas telescópicas de alta calidad, perfectas para proyectos que requieren precisión y alcance extendido.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100 card-margin">
+                            <img src="./assent/img/GRUA-EDIT.jpg" class="card-img-top" alt="Transporte de Maquinaria">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Transporte Cama Baja</h5>
+                                <p class="card-text">¿Necesitas mover cargas pesadas o vehículos de gran tamaño? Ofrecemos alquiler de transporte con cama baja, ideal para transportar maquinaria, equipos y vehículos de manera segura y eficiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100 card-margin">
+                            <img src="./assent/img/supervisor.jpeg" class="card-img-top" alt="Transporte de Maquinaria">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Supervisor de Izaje</h5>
+                                <p class="card-text">¿Necesitas garantizar la seguridad y eficiencia en tus operaciones de izaje? Contamos con supervisores de izaje altamente capacitados para asegurar que tus proyectos se realicen con los más altos estándares de seguridad y precisión.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100 card-margin">
+                            <img src="./assent/img/GRUA GRANDE.JPG" class="card-img-top" alt="Transporte de Maquinaria">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Servicio de Operadores</h5>
+                                <p class="card-text">¿Necesitas operadores calificados para manejar maquinaria o equipos pesados? Ofrecemos operadores expertos y capacitados para garantizar la eficiencia y seguridad en tus operaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100 card-margin">
+                            <img src="./assent/img/ISAJE.JPG" class="card-img-top" alt="Transporte de Maquinaria">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Elementos de Izaje</h5>
+                                <p class="card-text">¿Necesitas equipos confiables para tus operaciones de izaje? Ofrecemos una amplia gama de elementos de izaje diseñados para garantizar seguridad y eficiencia en el manejo de cargas pesadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card h-100 card-margin">
+                            <img src="./assent/img/camion-logo.jpg" class="card-img-top" alt="Transporte de Maquinaria">
+                            <div class="card-body">
+                                <h5 class="card-title centrar-letra">Transporte de Maquinaria</h5>
+                                <p class="card-text">¿Necesitas mover maquinaria pesada y equipos grandes de manera segura y eficiente? Ofrecemos servicios especializados en transporte de maquinaria, garantizando que tus equipos lleguen a su destino en perfectas condiciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2024 GruasDS. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="./assent/iconos/FB_icon-icons.com_65534.png" alt="Facebook" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="./assent/iconos/TWITTER_icon-icons.com_65536.png" alt="Twitter" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="./assent/iconos/INSTAGRAM_icon-icons.com_65535 (1).png" alt="Instagram" style="width: 24px; margin-right: 10px;">
+                    </a>
+                    <a href="mailto:contacto@gruasds.com" target="_blank">
+                        <img src="./assent/iconos/GMAIL_icon-icons.com_65540.png" alt="Email" style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <a href="https://w.app/GruasDs" class="whatsapp-button" target="_blank">
+        <img src="./assent/img/whatsapp (1).png" alt="WhatsApp">
+    </a
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
